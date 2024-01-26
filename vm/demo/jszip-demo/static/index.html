@@ -8,8 +8,6 @@
 <script src="/dist/jszip.min.js"></script>
 <script src="/dist/web/scratch-vm.js"></script>
 <script>
-// const vm = new VirtualMachine();
-
 const sb = document.getElementById("sb");
 sb.addEventListener("change", handleFiles, false);
 
@@ -20,11 +18,6 @@ function handleFiles() {
         // https://stuk.github.io/jszip/documentation/api_jszip/file_name.html
         zip.file("project.json").async("string").then((project) => {
             document.getElementById("filename").innerText = project;
-            /*
-            vm.deserializeProject(project, zip).then(() => {
-                document.getElementById("filename").innerText = fname;
-            });
-            */
         })
     });
 }

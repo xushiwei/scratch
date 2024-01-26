@@ -19,8 +19,10 @@ function handleFiles() {
     zip.loadAsync(fname).then((zip) => {
         // https://stuk.github.io/jszip/documentation/api_jszip/file_name.html
         zip.file("project.json").async("string").then((project) => {
+            vm.start();
             vm.deserializeProject(project, zip).then(() => {
                 document.getElementById("filename").innerText = fname;
+                vm.greenFlag();
             });
         })
     });
