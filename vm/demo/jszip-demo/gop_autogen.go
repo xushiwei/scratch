@@ -7,19 +7,19 @@ import (
 
 const _ = true
 
-type loadsb3 struct {
+type jszip struct {
 	yap.App
 }
-//line vm/demo/jszip-demo/loadsb3_yap.gox:3
-func (this *loadsb3) MainEntry() {
-//line vm/demo/jszip-demo/loadsb3_yap.gox:3:1
+//line vm/demo/jszip-demo/jszip_yap.gox:3
+func (this *jszip) MainEntry() {
+//line vm/demo/jszip-demo/jszip_yap.gox:3:1
 	this.Static__0("/dist", os.DirFS("../../dist"))
-//line vm/demo/jszip-demo/loadsb3_yap.gox:4:1
+//line vm/demo/jszip-demo/jszip_yap.gox:4:1
 	this.Static__0("/")
-//line vm/demo/jszip-demo/loadsb3_yap.gox:6:1
+//line vm/demo/jszip-demo/jszip_yap.gox:6:1
 	this.Run(":8888")
 }
 func main() {
-//line vm/demo/jszip-demo/loadsb3_yap.gox:6:1
-	yap.Gopt_App_Main(new(loadsb3))
+//line vm/demo/jszip-demo/jszip_yap.gox:6:1
+	yap.Gopt_App_Main(new(jszip))
 }
